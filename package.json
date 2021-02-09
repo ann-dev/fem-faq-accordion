@@ -1,0 +1,24 @@
+{
+  "name": "fem-faq-accordion",
+  "version": "1.0.0",
+  "description": "Responsive design challenge solution",
+  "main": "index.js",
+  "scripts": {
+    "develop": "pug -w . -o . -P",
+    "watch:css": "stylus -w src/styles/stylus/index.styl -o src/styles/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ann-dev/fem-faq-accordion.git"
+  },
+  "author": "ann-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ann-dev/fem-faq-accordion/issues"
+  },
+  "homepage": "https://github.com/ann-dev/fem-faq-accordion#readme",
+  "dependencies": {
+    "pug": "^3.0.0",
+    "stylus": "^0.54.8"
+  }
+}

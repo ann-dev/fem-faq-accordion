@@ -1,0 +1,91 @@
+body
+    align-items: center
+    box-sizing: border-box
+    background: hsl(273, 75%, 66%)
+    background: linear-gradient(0deg, hsl(240, 73%, 65%) 10%, hsl(273, 75%, 66%) 100%)
+    color: hsl(237, 12%, 33%)
+    display: flex
+    flex-direction: column
+    font-family: 'Kumbh Sans', sans-serif
+    font-size: 13px
+    -moz-osx-font-smoothing:grayscale
+    -webkit-font-smoothing:antialiased
+    justify-content: center
+    min-height: 100vh
+    p
+        margin: 0
+    a
+        text-decoration: none
+
+*,
+*:before,
+*:after
+    box-sizing:inherit
+
+.wrapper
+    background: white
+    border-radius: 25px
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        0 12.5px 10px rgba(0, 0, 0, 0.035),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        0 41.8px 33.4px rgba(258, 73%, 47%, 0.05),
+        0 100px 80px hsla(258, 73%, 47%, .5)
+
+    height: 535px
+    margin: 155px auto 50px
+    padding: 0 25px
+    position: relative
+    width: 325px
+    /* margin-top: -15px; */
+    /* max-width: 920px; */
+
+.drawing
+    left: 17px
+    max-width: 265px
+    position: absolute
+    top: -107.5px
+
+.drawing-shadow
+    left: 40px
+    position: absolute
+    top: 0
+
+.text-wrapper
+    margin-top: 138px
+    h1
+        color: hsl(238, 29%, 16%)
+        font-size: 33px
+        margin-bottom: 16px;
+        text-align: center
+
+.toggle-wrapper
+    border-bottom: 1px solid hsl(240, 5%, 91%)
+    padding: 19px 0
+
+.toggler-top
+    align-items: center
+    display: flex
+    justify-content: space-between
+    &:hover
+        cursor: pointer
+
+.toggle-arrow
+    height: 7px
+    width: 11px
+
+.toggle-text
+    color: hsl(240, 6%, 50%)
+    display: none
+
+.attribution
+    z-index: 2
+    p
+        color: white
+        font-size: 11px
+        margin-top: 5px
+        text-align: center
+    a
+        color: white
+        font-weight: 700
