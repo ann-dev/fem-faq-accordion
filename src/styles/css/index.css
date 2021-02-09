@@ -1,3 +1,6 @@
+/*
+ * Global styles
+ */
 body {
   align-items: center;
   box-sizing: border-box;
@@ -7,10 +10,11 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Kumbh Sans', sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   justify-content: center;
+  height: auto;
   min-height: 100vh;
 }
 body p {
@@ -24,17 +28,18 @@ body a {
 *:after {
   box-sizing: inherit;
 }
+/*
+ * Accordion styles
+ */
 .wrapper {
   background: #fff;
   border-radius: 25px;
   box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.02), 0 6.7px 5.3px rgba(0,0,0,0.028), 0 12.5px 10px rgba(0,0,0,0.035), 0 22.3px 17.9px rgba(0,0,0,0.042), 0 41.8px 33.4px rgba(255,186,120,0.05), 0 100px 80px rgba(85,32,207,0.5);
-  height: 535px;
+  min-height: 535px;
   margin: 155px auto 50px;
-  padding: 0 25px;
+  padding: 0 25px 30px;
   position: relative;
   width: 325px;
-/* margin-top: -15px; */
-/* max-width: 920px; */
 }
 .drawing {
   left: 17px;
@@ -56,25 +61,51 @@ body a {
   margin-bottom: 16px;
   text-align: center;
 }
-.toggle-wrapper {
+.accordion {
   border-bottom: 1px solid #e7e7e9;
-  padding: 19px 0;
 }
-.toggler-top {
+.accordion-button {
   align-items: center;
+  background: inherit;
+  border: none;
   display: flex;
+  font-family: 'Kumbh Sans', sans-serif;
   justify-content: space-between;
+  padding: 19px 0;
+  text-align: left;
+  width: 100%;
 }
-.toggler-top:hover {
+.accordion-button:focus {
+  outline: none;
+}
+.accordion-button:hover {
   cursor: pointer;
 }
-.toggle-arrow {
+.accordion-icon {
   height: 7px;
   width: 11px;
 }
+.accordion-bottom {
+  line-height: 18px;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  max-width: 245px;
+  transition: all 0.2s linear;
+}
+.accordion-button[aria-expanded='true'] > .accordion-title {
+  font-weight: 700;
+}
+.accordion-button[aria-expanded='true'] > .accordion-icon {
+  transform: rotate(180deg);
+}
+.accordion-button[aria-expanded='true'] + .accordion-bottom {
+  opacity: 1;
+  margin-bottom: 19px;
+  height: auto;
+}
 .toggle-text {
   color: #787887;
-  display: none;
 }
 .attribution {
   z-index: 2;
@@ -88,4 +119,7 @@ body a {
 .attribution a {
   color: #fff;
   font-weight: 700;
+}
+.attribution a:hover {
+  text-decoration: underline;
 }
