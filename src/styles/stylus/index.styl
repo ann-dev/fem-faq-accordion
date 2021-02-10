@@ -47,10 +47,10 @@ body
     width: 325px
 
 .drawing
-    left: 17px
-    max-width: 265px
+    left: calc((325px - 245px) / 2)
+    max-width: 245px
     position: absolute
-    top: -107.5px
+    top: -110px
 
 .drawing-shadow
     left: 40px
@@ -68,19 +68,19 @@ body
 .accordion
     border-bottom: 1px solid hsl(240, 5%, 91%)
 
-.accordion-button
+.accordion-top
     align-items: center
-    background: inherit
     border: none
     display: flex
-    font-family: 'Kumbh Sans', sans-serif
     font-size: 13px
     justify-content: space-between
     padding: 19px 0
     text-align: left
     width: 100%
-    &:focus
-        outline: none;
+    &::-webkit-details-marker
+        display: none
+    &:focus:not(:focus-visible)
+        outline: none
     &:hover
         cursor: pointer
 
@@ -91,22 +91,16 @@ body
 .accordion-bottom
     font-size: 12px
     line-height: 18px
-    opacity: 0;
-    overflow: hidden
-    height: 0;
-    max-width: 245px
-    transition: all .2s linear;
-
-.accordion-button[aria-expanded='true'] > .accordion-title
-    font-weight: 700
-
-.accordion-button[aria-expanded='true'] > .accordion-icon
-    transform: rotate(180deg)
-
-.accordion-button[aria-expanded='true'] + .accordion-bottom
-    opacity: 1;
     margin-bottom: 19px
-    height: auto;
+    max-width: 245px
+
+.accordion[open]
+    .accordion-title
+        font-weight: 700
+
+.accordion[open]
+    .accordion-icon
+        transform: rotate(180deg)
 
 .toggle-text
     color: hsl(240, 6%, 50%)

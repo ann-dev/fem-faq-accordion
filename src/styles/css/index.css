@@ -41,10 +41,10 @@ body a {
   width: 325px;
 }
 .drawing {
-  left: 17px;
-  max-width: 265px;
+  left: calc((325px - 245px) / 2);
+  max-width: 245px;
   position: absolute;
-  top: -107.5px;
+  top: -110px;
 }
 .drawing-shadow {
   left: 40px;
@@ -63,22 +63,23 @@ body a {
 .accordion {
   border-bottom: 1px solid #e7e7e9;
 }
-.accordion-button {
+.accordion-top {
   align-items: center;
-  background: inherit;
   border: none;
   display: flex;
-  font-family: 'Kumbh Sans', sans-serif;
   font-size: 13px;
   justify-content: space-between;
   padding: 19px 0;
   text-align: left;
   width: 100%;
 }
-.accordion-button:focus {
+.accordion-top::-webkit-details-marker {
+  display: none;
+}
+.accordion-top:focus:not(:focus-visible) {
   outline: none;
 }
-.accordion-button:hover {
+.accordion-top:hover {
   cursor: pointer;
 }
 .accordion-icon {
@@ -88,22 +89,14 @@ body a {
 .accordion-bottom {
   font-size: 12px;
   line-height: 18px;
-  opacity: 0;
-  overflow: hidden;
-  height: 0;
+  margin-bottom: 19px;
   max-width: 245px;
-  transition: all 0.2s linear;
 }
-.accordion-button[aria-expanded='true'] > .accordion-title {
+.accordion[open] .accordion-title {
   font-weight: 700;
 }
-.accordion-button[aria-expanded='true'] > .accordion-icon {
+.accordion[open] .accordion-icon {
   transform: rotate(180deg);
-}
-.accordion-button[aria-expanded='true'] + .accordion-bottom {
-  opacity: 1;
-  margin-bottom: 19px;
-  height: auto;
 }
 .toggle-text {
   color: #787887;
