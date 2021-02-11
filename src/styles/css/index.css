@@ -70,6 +70,7 @@ body a {
   font-size: 13px;
   justify-content: space-between;
   padding: 19px 0;
+  position: relative;
   text-align: left;
   width: 100%;
 }
@@ -82,8 +83,17 @@ body a {
 .accordion-top:hover {
   cursor: pointer;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .accordion-top {
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
 .accordion-icon {
   height: 7px;
+  position: absolute;
+  right: 0;
+  top: 22px;
   width: 11px;
 }
 .accordion-bottom {
