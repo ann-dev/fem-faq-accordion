@@ -40,25 +40,61 @@ body a {
   position: relative;
   width: 325px;
 }
+@media (min-width: 1024px) {
+  .wrapper {
+    background-image: url("../../images/bg-pattern-desktop.svg");
+    background-position: right 500px bottom -150px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    min-height: 500px;
+    width: 920px;
+  }
+}
 .drawing {
   left: calc((325px - 245px) / 2);
   max-width: 245px;
   position: absolute;
   top: -110px;
+  z-index: 2;
 }
-.drawing-shadow {
+@media (min-width: 1024px) {
+  .drawing {
+    left: -50px;
+    max-width: 450px;
+    top: calc((500px - 340px) / 2 - 10px);
+  }
+}
+.drawing-shadow-mobile {
+  display: block;
   left: 40px;
   position: absolute;
   top: 0;
 }
+@media (min-width: 1024px) {
+  .drawing-shadow-mobile {
+    display: none;
+  }
+}
 .text-wrapper {
   margin-top: 138px;
+}
+@media (min-width: 1024px) {
+  .text-wrapper {
+    margin: 75px 0 0 475px;
+    width: 330px;
+  }
 }
 .text-wrapper h1 {
   color: #1d1e35;
   font-size: 33px;
   margin-bottom: 16px;
   text-align: center;
+}
+@media (min-width: 1024px) {
+  .text-wrapper h1 {
+    text-align: left;
+  }
 }
 .accordion {
   border-bottom: 1px solid #e7e7e9;
@@ -97,13 +133,25 @@ body a {
   width: 11px;
 }
 .accordion-bottom {
+  color: #787887;
   font-size: 12px;
   line-height: 18px;
   margin-bottom: 19px;
   max-width: 245px;
 }
+@media (min-width: 1024px) {
+  .accordion-bottom {
+    max-width: 320px;
+  }
+}
+.accordion-title {
+  transition: text-shadow 0.2s ease-out;
+}
 .accordion[open] .accordion-title {
-  font-weight: 700;
+  text-shadow: 0 0 1px #1d1e35, 0 0 1px #1d1e35;
+}
+.accordion-icon {
+  transition: transform 0.2s ease-out;
 }
 .accordion[open] .accordion-icon {
   transform: rotate(180deg);
