@@ -1,6 +1,6 @@
 # Frontend Mentor - FAQ Accordion Card
 
-![Design preview for the FAQ Accordion Card coding challenge](./design/desktop-preview.jpg)
+![Design preview for the FAQ Accordion Card coding challenge](./preview.jpg)
 
 <h3 align="center"><a href="https://fem-faq-accordion-card.netlify.app/" target="_blank">✨ Live Demo</a></h3>
 
