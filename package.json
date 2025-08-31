@@ -1,13 +1,14 @@
 {
   "name": "fem-faq-accordion",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Responsive design challenge solution",
   "main": "index.js",
   "scripts": {
     "watch:pug": "npx pug-cli -w . -o . -P",
     "watch:css": "stylus -w src/styles/stylus/index.styl -o src/styles/css/",
     "browser-sync": "browser-sync start --server src --files 'src/*.html, src/styles/css/*.css' --port 3000",
-    "dev": "concurrently \"npm run watch:pug\" \"npm run watch:css\" \"npm run browser-sync\""
+    "dev": "concurrently \"npm run watch:pug\" \"npm run watch:css\" \"npm run browser-sync\"",
+    "build": "npx pug-cli . -o . -P && stylus src/styles/stylus/index.styl -o src/styles/css/"
   },
   "repository": {
     "type": "git",
