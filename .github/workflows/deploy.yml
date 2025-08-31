@@ -26,7 +26,7 @@ jobs:
     - name: Build project
       run: |
         npx pug-cli . -o . -P
-        stylus src/styles/stylus/index.styl -o src/styles/css/
+        npx stylus src/styles/stylus/index.styl -o src/styles/css/
         
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
