@@ -29,16 +29,10 @@ Beside the packages in the package.json, pug-cli must be installed in order to w
 
 ### Development
 
-Watching and compiling Pug to HTML:
+To run page in browser and compile HTML & styles:
 
 ```sh
-npm run develop
-```
-
-Watching and compiling Stylus to CSS (CSS will be compiled in the styles/css folder):
-
-```sh
-npm run watch:css
+npm run dev
 ```
 
 ## Credits
