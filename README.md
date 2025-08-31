@@ -25,23 +25,18 @@
 ## Usage
 
 ### Installation
+
 Beside the packages in the package.json, pug-cli must be installed in order to watch and compile Pug to HTML.
 
 ### Development
 
-Watching and compiling Pug to HTML:
+To run page in browser and compile HTML & styles:
 
 ```sh
-npm run develop
-```
-
-Watching and compiling Stylus to CSS (CSS will be compiled in the styles/css folder):
-
-```sh
-npm run watch:css
+npm run dev
 ```
 
 ## Credits
 
--   Designed by [Frontend Mentor Team](https://www.frontendmentor.io/).
--   Code written by [ann-dev](https://github.com/ann-dev).
+- Designed by [Frontend Mentor Team](https://www.frontendmentor.io/).
+- Code written by [ann-dev](https://github.com/ann-dev).
