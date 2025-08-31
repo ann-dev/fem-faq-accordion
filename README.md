@@ -2,11 +2,11 @@
 
 ![Design preview for the FAQ Accordion Card coding challenge](./preview.jpg)
 
-<h3 align="center"><a href="https://fem-faq-accordion-card.netlify.app/" target="_blank">✨ Live Demo</a></h3>
+<h3 align="center"><a href="https://ann-dev.github.io/fem-faq-accordion/" target="_blank">✨ Live Demo</a></h3>
 
 <p align="center">
   <img alt="last commit badge" src="https://img.shields.io/github/last-commit/ann-dev/fem-faq-accordion?style=flat-square" />
-  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/469d0203-19f6-40c9-90d0-201943d18869/deploy-status" />
+  <img alt="code stack" src="https://img.shields.io/badge/tech_stack-pug.js, Stylus-ff69b4.svg?style=flat-square">
 </p><br />
 
 ## Description
