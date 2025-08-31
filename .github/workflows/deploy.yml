@@ -28,10 +28,17 @@ jobs:
         npx pug-cli . -o . -P
         npx stylus src/styles/stylus/index.styl -o src/styles/css/
         
+    - name: Prepare deployment files
+      run: |
+        mkdir -p dist
+        cp src/*.html dist/
+        cp -r src/styles dist/
+        cp -r src/images dist/
+        
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./src
+        publish_dir: ./dist
         cname: # Add your custom domain here if you have one
