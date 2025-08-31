@@ -1,0 +1,156 @@
+/*
+ * Global styles
+ */
+
+body
+    align-items: center
+    box-sizing: border-box
+    background: hsl(273, 75%, 66%)
+    background: linear-gradient(0deg, hsl(240, 73%, 65%) 10%, hsl(273, 75%, 66%) 100%)
+    color: hsl(237, 12%, 33%)
+    display: flex
+    flex-direction: column
+    font-family: 'Kumbh Sans', sans-serif
+    -moz-osx-font-smoothing:grayscale
+    -webkit-font-smoothing:antialiased
+    justify-content: center
+    height: auto
+    min-height: 100vh
+    p
+        margin: 0
+    a
+        text-decoration: none
+
+*,
+*:before,
+*:after
+    box-sizing:inherit
+
+/*
+ * Accordion styles
+ */
+
+.wrapper
+    background: white
+    border-radius: 25px
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        0 12.5px 10px rgba(0, 0, 0, 0.035),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        0 41.8px 33.4px rgba(258, 73%, 47%, 0.05),
+        0 100px 80px hsla(258, 73%, 47%, .5)
+    min-height: 535px
+    margin: 155px auto 50px
+    padding: 0 25px 30px
+    position: relative
+    width: 325px
+    @media (min-width: 1024px)
+        background-image: url(../../images/bg-pattern-desktop.svg)
+        background-position: right 500px bottom -150px
+        background-repeat: no-repeat
+        display: flex
+        flex-direction: row
+        min-height: 500px
+        width: 920px
+
+.drawing
+    left: calc((325px - 245px) / 2)
+    max-width: 245px
+    position: absolute
+    top: -110px
+    z-index: 2
+    @media (min-width: 1024px)
+        left: -50px
+        max-width: 450px
+        top: calc((500px - 340px) / 2 - 10px)
+
+.drawing-shadow-mobile
+    display: block
+    left: 40px
+    position: absolute
+    top: 0
+    @media (min-width: 1024px)
+        display: none
+
+.text-wrapper
+    margin-top: 138px
+    @media (min-width: 1024px)
+        margin: 75px 0 0 475px
+        width: 330px
+    h1
+        color: hsl(238, 29%, 16%)
+        font-size: 33px
+        margin-bottom: 16px;
+        text-align: center
+        @media (min-width: 1024px)
+            text-align: left
+
+.accordion
+    border-bottom: 1px solid hsl(240, 5%, 91%)
+
+.accordion-top
+    align-items: center
+    border: none
+    display: flex
+    font-size: 13px
+    justify-content: space-between
+    padding: 19px 0
+    position: relative
+    text-align: left
+    width: 100%
+    &::-webkit-details-marker
+        display: none
+    &:focus:not(:focus-visible)
+        outline: none
+    &:hover
+        cursor: pointer
+    @media only screen and (-webkit-min-device-pixel-ratio: 2)
+        outline: 0
+        -webkit-tap-highlight-color: transparent
+
+.accordion-icon
+    height: 7px
+    position: absolute
+    right: 0
+    top: 22px
+    width: 11px
+
+.accordion-bottom
+    color: hsl(240, 6%, 50%)
+    font-size: 12px
+    line-height: 18px
+    margin-bottom: 19px
+    max-width: 245px
+    @media (min-width: 1024px)
+        max-width: 320px
+
+.accordion-title
+    transition: text-shadow .2s ease-out
+
+.accordion[open]
+    .accordion-title
+        text-shadow: 0 0 1px hsl(238, 29%, 16%), 0 0 1px hsl(238, 29%, 16%)
+
+.accordion-icon
+    transition: transform .2s ease-out
+
+.accordion[open]
+    .accordion-icon
+        transform: rotate(180deg)
+
+.toggle-text
+    color: hsl(240, 6%, 50%)
+
+.attribution
+    z-index: 2
+    p
+        color: white
+        font-size: 11px
+        margin-top: 5px
+        text-align: center
+    a
+        color: white
+        font-weight: 700
+        &:hover
+            text-decoration: underline

@@ -1,0 +1,32 @@
+.content-wrapper
+    img.drawing(src="images/illustration-woman-online.svg" alt="" role="presentation")
+    img.drawing-shadow-mobile(src="images/bg-pattern-mobile.svg" alt="" role="presentation")
+    .text-wrapper
+        h1 FAQ
+        mixin accordion(title = 'Default title', text = 'Default answer')
+            details.accordion
+                summary.accordion-top
+                    span.accordion-title= title
+                    img.accordion-icon(src="images/icon-arrow-down.svg" alt="" role="presentation")
+                .accordion-bottom
+                    p.accordion-text= text
+        +accordion(
+            'How many team members can I invite?',
+            'You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.'
+        )
+        +accordion(
+            'What is the maximum file upload size?',
+            'No more than 2GB. All files in your account must fit your allotted storage space.'
+        )
+        +accordion(
+            'How do I reset my password?',
+            'Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.'
+        )
+        +accordion(
+            'Can I cancel my subscription?',
+            'Yes! Send us a message and we’ll process your request no questions asked.'
+        )
+        +accordion(
+            'Do you provide additional support?',
+            'Chat and email support is available 24/7. Phone lines are open during normal business hours.'
+        )
