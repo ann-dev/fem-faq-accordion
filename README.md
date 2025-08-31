@@ -25,6 +25,7 @@
 ## Usage
 
 ### Installation
+
 Beside the packages in the package.json, pug-cli must be installed in order to watch and compile Pug to HTML.
 
 ### Development
@@ -37,5 +38,5 @@ npm run dev
 
 ## Credits
 
--   Designed by [Frontend Mentor Team](https://www.frontendmentor.io/).
--   Code written by [ann-dev](https://github.com/ann-dev).
+- Designed by [Frontend Mentor Team](https://www.frontendmentor.io/).
+- Code written by [ann-dev](https://github.com/ann-dev).
